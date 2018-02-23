@@ -1,6 +1,8 @@
 #main-container{
   background-color: orange;
-  width: 800px;
+  max-width: 800px;
+  width: 100%;
+  min-width: 300px;
   min-height: 80px;
   height: 100%;
   border-radius: 20px;
