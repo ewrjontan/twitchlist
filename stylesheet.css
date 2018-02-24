@@ -160,6 +160,7 @@ header{
   min-width: 100px;
   background-color: none;
   width: 25%;
+  text-align: center;
 }
 
 .game-details{
