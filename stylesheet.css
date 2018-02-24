@@ -6,9 +6,10 @@
   min-height: 80px;
   height: 100%;
   border-radius: 20px;
-  margin: 50px auto 0 auto;
+  margin: 100px auto 0 auto;
   padding-bottom: 20px;
   box-shadow: inset 0px 0px 3px 2px black;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 a{
@@ -68,7 +69,7 @@ header{
 
 .fa-times{
   position: absolute;
-  left: 740px;
+  right:5px;
   top: 0px;
 }
 
@@ -124,7 +125,9 @@ header{
   flex-direction: row;
   justify-content: space-between;
   align-items: baseline;
-  flex-wrap: nowrap;
+  flex-wrap: no-wrap;
+  background-color: none;
+  min-width: 300px;
 }
 
 .offline-dot{
@@ -148,34 +151,42 @@ header{
 }
 
 .username{
-  width: 150px;
+  min-width: 100px;
+  width: 25%;
   background-color: none;
 }
 
 .game-name{
-  width: 150px;
+  min-width: 100px;
   background-color: none;
+  width: 25%;
 }
 
 .game-details{
-  width: 492px;
+  /*width: 492px;*/
+  width: 50%;
   background-color: none;
   text-align: left;
+  padding-right: 10px;
 }
 
 .status-offline{
-  flex-grow: 1;
+  /*flex-grow: 1;*/
+  width: 50%;
+  text-align: center;
 }
 
 .username-offline{
-  width: 400px;
+  /*width: 400px;*/
+  width: 50%;
+  background-color: none;
 }
 
 #add-remove-container{
   display: flex;
   position: relative;
   justify-content: space-around;
-  top: 15px;
+  top: 18px;
   background-color: none;
   width: 300px;
   margin-left: auto;
