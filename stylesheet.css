@@ -50,11 +50,13 @@ header{
   margin-right: auto;
   border-radius: 10px;
   border: 1px black solid;
+  height: 20px;
 }
 
 .fa-search{
   position: absolute;
   left: 5px;
+  top:15%;
 }
 
 #search-input{
@@ -70,7 +72,7 @@ header{
 .fa-times{
   position: absolute;
   right:5px;
-  top: 0px;
+  top:15%;
 }
 
 #search-input:focus{
