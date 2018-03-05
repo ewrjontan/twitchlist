@@ -1,3 +1,10 @@
+//detect if touch screen
+function hasTouch() {
+    return 'ontouchstart' in document.documentElement
+           || navigator.maxTouchPoints > 0
+           || navigator.msMaxTouchPoints > 0;
+};
+
 //xxxxxxxxxxxxxxxxxx Declaration of global variables xxxxxxxxxxxxxxxxxxxxxxxxx
 var buttonAll = true;
 var buttonOnline = false;
@@ -90,6 +97,12 @@ function sendRequest(url, user, i, callback){
 //xxxxxxxxxxxxxxxxxxxxxxxxxxxxJqueryxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 //xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 $(document).ready(function(){
+  //adds HasHover class to body to allow for hovering over elements
+	if (!hasTouch()) {
+	  console.log("Not a touch screen, adding hover class!");
+    $("body").addClass("HasHover");
+	};
+  
   //initial function call
   userUrl(function(channelArray){
   });
@@ -99,7 +112,9 @@ $(document).ready(function(){
   $(".button").hover(
     function(){
       $originalButtonColor = $(this).css("backgroundColor");
-      $(this).css({"backgroundColor": "#cc7a00", "cursor": "pointer"});
+      if ($("body").hasClass("HasHover")){
+        $(this).css({"backgroundColor": "#cc7a00", "cursor": "pointer"});
+      };
     }, function(){
       $(this).css({"backgroundColor": $originalButtonColor, "cursor": "default"});
     }
@@ -171,7 +186,9 @@ $(document).ready(function(){
   //xxxxxxxxxxxxxx clear search input xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
   $(".fa-times").hover(
   function(){
-    $(this).css({"color": "red", "cursor": "pointer"});
+    if ($("body").hasClass("HasHover")){
+      $(this).css({"color": "red", "cursor": "pointer"});
+    };
   }, function(){
     $(this).css({"color": "black", "cursor": "default"});
   });
@@ -188,7 +205,9 @@ $(document).ready(function(){
   //xxxxxxxxxx functions for add and remove buttons xxxxxxxxxxxxxxxxxxxxxxxxxxx
   $(".bottom-button").hover(
     function(){
-      $(this).css({"color": "#cccccc", "cursor": "pointer"});
+      if ($("body").hasClass("HasHover")){
+        $(this).css({"color": "#cccccc", "cursor": "pointer"});
+      };
     }, function(){
       $(this).css({"color": "white", "cursor": "default"});
     });
