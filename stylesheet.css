@@ -37,8 +37,8 @@ header{
   color: transparent;
   text-shadow: 5px 2px 5px rgba(255,153,0,0.6);
   -webkit-background-clip: text;
-     -moz-background-clip: text;
-          background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
 }
 
 #form-container{
@@ -166,7 +166,6 @@ header{
 }
 
 .game-details{
-  /*width: 492px;*/
   width: 50%;
   background-color: none;
   text-align: left;
@@ -174,13 +173,11 @@ header{
 }
 
 .status-offline{
-  /*flex-grow: 1;*/
   width: 50%;
   text-align: center;
 }
 
 .username-offline{
-  /*width: 400px;*/
   width: 50%;
   background-color: none;
 }
