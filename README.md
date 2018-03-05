@@ -1,2 +1,0 @@
-# twitchlist
-Twitch Friends List
