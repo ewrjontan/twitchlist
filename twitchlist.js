@@ -4,7 +4,7 @@ var buttonOnline = false;
 var buttonOffline = false;
 var searchInputValue = "";
 
-var usernameArray = ["ESL_SC2", "OgamingSC2", "cretetion", "freecodecamp", "storbeck", "habathcx", "RobotCaleb", "noobs2ninjas"];
+var usernameArray = ["ESL_SC2", "OgamingSC2", "cretetion", "summit1g", "storbeck", "shroud", "habathcx", "RobotCaleb", "noobs2ninjas"];
 
 //xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 //xxxxxxxxxxxxxxxxxxx Functions xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
@@ -92,7 +92,6 @@ function sendRequest(url, user, i, callback){
 $(document).ready(function(){
   //initial function call
   userUrl(function(channelArray){
-    console.log("this is working");
   });
   
   //xxxxxxxxxxxx button hover function xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
@@ -182,7 +181,7 @@ $(document).ready(function(){
     searchInputValue = "";
     $("#user-container").empty();
     userUrl(function(channelArray){
-      console.log("this is working");
+      //console.log("this is working");
     });
   });
   
@@ -198,7 +197,7 @@ $(document).ready(function(){
     addUser();
     $("#user-container").empty();
     userUrl(function(channelArray){
-      console.log("this is working");
+      //console.log("this is working");
     });
   });
   
@@ -206,7 +205,7 @@ $(document).ready(function(){
     removeUser();
     $("#user-container").empty();
     userUrl(function(channelArray){
-      console.log("this is working");
+      //console.log("this is working");
     });
   });  
 });
@@ -238,17 +237,4 @@ function removeUser(){
   
 };
 
-/*function removeUser(){
-  var userToRemove = prompt("Enter a username to remove (Note: Case Sensitive)");  
-  if (userToRemove != null && userToRemove.length >0){
-    for (i=0; i<usernameArray.length; i++){
-      if (usernameArray[i] == userToRemove){
-        usernameArray.splice(i, 1);
-        alert(userToRemove + " has been removed from your friends list!"); 
-        break;
-      }else if (i == usernameArray.length-1){
-        alert(userToRemove + " is not currently in your friends list!");
-      };
-    };  
-  };
-};*/
+
